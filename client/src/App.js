@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import BaarChart from './components/chart-data/BaarChart';
+import LineChart from './components/chart-data/LineChart';
+import PieChartData from './components/chart-data/PieChartData';
+import CustomerTableData from './components/table-data/CustomerTableData';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{display:'flex',flexDirection:'column',justifyContent:'center'}}>
+      <div>
+      <CustomerTableData/>
+      </div>
+      <div>
+      <BaarChart/>
+      </div>
+      <div>
+      <LineChart/>
+
+      </div>
+      <div>
+      <PieChartData/>
+      </div>    
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
