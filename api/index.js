@@ -41,24 +41,7 @@ admin.initializeApp({
     }
   });
 
-  app.post("/sign-up-new", async (req, res) => {
-    try {
-      const newUserResponse = await admin.auth().createUserWithEmailAndPassword({
-        email: req.body.email,
-        password: req.body.password,
-        emailVerified: false,
-        disabled: false,
-      });
-      //res.status(200);
-      res.json(newUserResponse);
-    } catch (error) {
-      //res.status(404);
-      res.json({
-        Error: error,
-      });
-    }
-  });
-
-  app.listen(3000,()=>{
-    console.log("server started on the port 3000")
+  
+  app.listen(3002,()=>{
+    console.log("server started on the port 3002")
   });
